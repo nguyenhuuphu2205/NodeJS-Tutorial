@@ -1,0 +1,14 @@
+compute 2 còn 1 ? chua dùng 1TB, tru?c dùng cho osd1(xong)
+compute 3 process osd-5 running(xong), osd 8 down(xong)
+compute 7 osd 17 down, 1 ? 3tb chua dùng
+copute5 down(xong)
+compute4 1 ? 3tb chua dùng
+
+
+
+ parted -s /dev/sdd mklabel gpt mkpart primary xfs 0% 100%
+
+mkfs.xfs /dev/sdd -f
+ceph-deploy disk zap compute7:/dev/sdd
+ceph-deploy osd prepare compute7:/dev/sdd
+ceph-deploy osd activate compute7:/dev/sdd1

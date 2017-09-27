@@ -1,0 +1,9 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "private": "true",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "*"
+  }
+}
